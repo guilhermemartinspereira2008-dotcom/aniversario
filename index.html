@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffe4ef">
+  <title>Feliz aniversário, meu amor!</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: linear-gradient(145deg, #fff4f8, #ffd8e8);
+      color: #a91450;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    main { width: min(94vw, 540px); text-align: center; }
+    h1 { margin: 0 0 1.4rem; font-size: clamp(1.3rem, 5vw, 2rem); }
+    .heart {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1.12;
+      filter: drop-shadow(0 16px 24px #c9347050);
+      animation: beat 1.8s ease-in-out infinite;
+    }
+    .heart svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .message {
+      position: absolute;
+      inset: 26% 20% 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .12em;
+      color: #a91450;
+      font-weight: 700;
+      font-size: clamp(1.1rem, 6vw, 2.4rem);
+      line-height: 1.25;
+      text-align: center;
+    }
+    .message span { max-width: 100%; overflow-wrap: anywhere; }
+    .message span:nth-child(2), .message span:nth-child(4) {
+      font-size: 1.12em;
+    }
+    .note { margin: 1rem 0 0; font-size: clamp(1rem, 4vw, 1.2rem); }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.025); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .heart { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Um presente feito com carinho 💝</h1>
+    <div class="heart" role="img" aria-label="Feliz aniversário, meu amor">
+      <svg viewBox="0 0 100 90" aria-hidden="true">
+        <path fill="#fff8fb" stroke="#e84f8b" stroke-width="1.5"
+          d="M50 86 8 47C-7 32 2 7 22 5c12-1 22 7 28 17C56 12 66 4 78 5c20 2 29 27 14 42Z"/>
+      </svg>
+      <div class="message" aria-hidden="true">
+        <span>Feliz</span>
+        <span>aniversário</span>
+        <span>meu</span>
+        <span>amor</span>
+      </div>
+    </div>
+    <p class="note">Que seu dia seja tão lindo quanto você 🌷</p>
+  </main>
+</body>
+</html>
